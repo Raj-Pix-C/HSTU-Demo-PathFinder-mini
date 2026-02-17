@@ -24,7 +24,12 @@ public class Controller implements Initializable {
     // choice box section //
 
     // enlisting all nodes
-    public ObservableList<String> items = FXCollections.observableArrayList("A", "B", "C", "D", "E", "F", "G", "H", "I", "J");
+    public ObservableList<String> items = FXCollections.observableArrayList(
+            "Second Gate", "DVM Building", "Auditorium-2", "Kazi Nazrul Islam Building",
+            "Administrative Building", "Dr. Kudrat-E-Khuda Building", "Gymnasium", "Main Gate",
+            "Bus Stand", "Agriculture Building", "Auditorium-1", "TSC", "Central Library",
+            "First Gate"
+    );
 
     // start choice box(dropdown)
     @FXML
@@ -72,7 +77,11 @@ public class Controller implements Initializable {
         System.out.print("path picked: ");
         LinkedList<Integer> path = (LinkedList<Integer>) pathfinder.pathConstruct(selectedStart, selectedEnd);
         for(int i = 0; i < path.size(); i++) {
-            System.out.print(items.get(path.get(i)) + " ");
+            System.out.print(items.get(path.get(i)));
+
+            if(i < path.size() - 1) {
+                System.out.print(" --> ");
+            }
         }
         label1.setText(selectedStart + " to " + selectedEnd);
         label1.setVisible(true);

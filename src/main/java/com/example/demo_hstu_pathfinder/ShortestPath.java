@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ShortestPath {
 
-    public int maxVertices = 10;
+    public int maxVertices = 14;
 
     public int[][] adjacencyMatrix = new int[maxVertices][maxVertices];
     public int[][] shortestPath = new int[maxVertices][maxVertices];
