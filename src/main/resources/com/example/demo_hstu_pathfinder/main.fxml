@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_hstu_pathfinder.Controller">
+   <children>
+      <AnchorPane fx:id="anchorpane">
+         <children>
+            <VBox layoutX="278.0" layoutY="74.0" prefHeight="317.0" prefWidth="348.0" />
+            <Button fx:id="goButton" layoutX="104.0" layoutY="305.0" mnemonicParsing="false" onAction="#onGoClicked" text="Go" />
+            <ChoiceBox id="End" fx:id="end" layoutX="39.0" layoutY="211.0" prefWidth="150.0" />
+            <ChoiceBox id="Start" fx:id="start" layoutX="42.0" layoutY="108.0" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
