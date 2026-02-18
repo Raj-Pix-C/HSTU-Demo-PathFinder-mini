@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
-<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_hstu_pathfinder.Controller">
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_hstu_pathfinder.Controller">
    <children>
-      <AnchorPane fx:id="actualBackground" prefHeight="720.0" prefWidth="1280.0">
+      <AnchorPane fx:id="actualBackground" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FDF6E3; -fx-border-color: #143173;-fx-border-width: 3;     -fx-border-radius: 5;">
          <children>
-            <Button fx:id="goButton" layoutX="150.0" layoutY="495.0" mnemonicParsing="false" onAction="#onGoClicked" prefHeight="26.0" prefWidth="63.0" text="Go" />
+            <Button fx:id="goButton" layoutX="150.0" layoutY="495.0" mnemonicParsing="false" onAction="#onGoClicked" prefHeight="26.0" prefWidth="63.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" text="Go" />
             <ChoiceBox id="End" fx:id="end" layoutX="39.0" layoutY="334.0" prefHeight="26.0" prefWidth="285.0" />
             <ChoiceBox id="Start" fx:id="start" layoutX="39.0" layoutY="161.0" prefHeight="26.0" prefWidth="285.0" />
-            <AnchorPane fx:id="mapArea" layoutX="528.0" layoutY="111.0" prefHeight="535.0" prefWidth="720.0" >
+            <AnchorPane fx:id="mapArea" layoutX="528.0" layoutY="111.0" prefHeight="535.0" prefWidth="720.0" style="-fx-background-color: #FDF6E3; -fx-border-color: #143173;-fx-border-width: 3;     -fx-border-radius: 5;">
                <children>
                   <Circle fx:id="SecondGate" fill="DODGERBLUE" layoutX="254.0" layoutY="87.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="Wajed" fill="DODGERBLUE" layoutX="367.0" layoutY="181.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
@@ -66,6 +62,9 @@
                   <Label layoutX="568.0" layoutY="402.0" scaleY="1.5" scaleZ="1.5" text="Central Library" wrapText="true" />
                </children>
             </AnchorPane>
+            <Label fx:id="startLabel" layoutX="165.0" layoutY="111.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" text="Start" />
+            <Label fx:id="endLabel" layoutX="165.0" layoutY="291.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" text="End" />
+            <Separator fx:id="separator" layoutX="433.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="3.0" scaleX="1.5" scaleZ="1.5" />
          </children>
       </AnchorPane>
    </children>

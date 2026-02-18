@@ -22,7 +22,7 @@ public class Main extends Application {
         primarystage.setResizable(false);
 
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("main.fxml")));
-        Scene scene = new Scene(loader.load(), 1366, 768);
+        Scene scene = new Scene(loader.load(), 1280, 720);
 
         primarystage.setScene(scene);
         primarystage.show();

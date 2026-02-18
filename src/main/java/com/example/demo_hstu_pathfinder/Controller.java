@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -27,7 +28,7 @@ public class Controller implements Initializable {
     public Button goButton;
     public AnchorPane mapArea;
     public AnchorPane actualBackground;
-
+    public Separator separator;
 
 
     // creating instance
@@ -280,6 +281,11 @@ public class Controller implements Initializable {
         // edges initialize section // finish //
 
         // Initialize Symmetric Access section // finish //
+
+
+        // separator line //
+        separator.setPrefWidth(4);
+
     }
 
 
