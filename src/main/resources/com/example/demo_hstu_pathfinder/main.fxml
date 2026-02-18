@@ -2,17 +2,70 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_hstu_pathfinder.Controller">
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_hstu_pathfinder.Controller">
    <children>
-      <AnchorPane fx:id="anchorpane">
+      <AnchorPane fx:id="actualBackground" prefHeight="720.0" prefWidth="1280.0">
          <children>
-            <VBox layoutX="278.0" layoutY="74.0" prefHeight="317.0" prefWidth="348.0" />
-            <Button fx:id="goButton" layoutX="104.0" layoutY="305.0" mnemonicParsing="false" onAction="#onGoClicked" text="Go" />
-            <ChoiceBox id="End" fx:id="end" layoutX="39.0" layoutY="211.0" prefWidth="150.0" />
-            <ChoiceBox id="Start" fx:id="start" layoutX="42.0" layoutY="108.0" prefWidth="150.0" />
+            <Button fx:id="goButton" layoutX="150.0" layoutY="495.0" mnemonicParsing="false" onAction="#onGoClicked" prefHeight="26.0" prefWidth="63.0" text="Go" />
+            <ChoiceBox id="End" fx:id="end" layoutX="39.0" layoutY="334.0" prefHeight="26.0" prefWidth="285.0" />
+            <ChoiceBox id="Start" fx:id="start" layoutX="39.0" layoutY="161.0" prefHeight="26.0" prefWidth="285.0" />
+            <AnchorPane fx:id="mapArea" layoutX="528.0" layoutY="111.0" prefHeight="535.0" prefWidth="720.0" >
+               <children>
+                  <Circle fx:id="SecondGate" fill="DODGERBLUE" layoutX="254.0" layoutY="87.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Wajed" fill="DODGERBLUE" layoutX="367.0" layoutY="181.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="MainGate" fill="DODGERBLUE" layoutX="253.0" layoutY="276.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="DVM" fill="DODGERBLUE" layoutX="367.0" layoutY="87.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Aud2" fill="DODGERBLUE" layoutX="435.0" layoutY="86.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Ten" fill="DODGERBLUE" layoutX="503.0" layoutY="183.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Admin" fill="DODGERBLUE" layoutX="502.0" layoutY="135.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Gym" fill="DODGERBLUE" layoutX="315.0" layoutY="244.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Bus" fill="DODGERBLUE" layoutX="503.0" layoutY="275.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Agri" fill="DODGERBLUE" layoutX="340.0" layoutY="357.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Lib" fill="DODGERBLUE" layoutX="537.0" layoutY="411.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="TSC" fill="DODGERBLUE" layoutX="284.0" layoutY="411.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="Aud1" fill="DODGERBLUE" layoutX="498.0" layoutY="356.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Circle fx:id="FirstGate" fill="DODGERBLUE" layoutX="255.0" layoutY="468.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
+                  <Line fx:id="dvm_aud2" endX="45.43262481689453" endY="-0.4317403733730316" layoutX="367.0" layoutY="87.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="19.677778244018555" startY="-0.6624593138694763" />
+                  <Line fx:id="g2_dvm" endX="125.5999755859375" endY="1.7702579498291016E-5" layoutX="212.0" layoutY="86.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="70.7199935913086" startY="0.1072721853852272" />
+                  <Line fx:id="g2_mg" endX="52.33333206176758" endY="121.7733383178711" layoutX="201.0" layoutY="112.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="52.9999885559082" startY="15.640007019042969" />
+                  <Line fx:id="mg_w" endX="16.013521194458008" endY="48.20542907714844" layoutX="254.0" layoutY="200.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="80.69627380371094" startY="-4.251293659210205" />
+                  <Line fx:id="dvm_w" endX="79.0" endY="-21.0" layoutX="287.0" layoutY="134.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="79.0" startY="23.0" />
+                  <Line fx:id="g2_w" endX="92.01952362060547" endY="-39.588592529296875" layoutX="248.0" layoutY="201.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="32.227149963378906" startY="-89.16529846191406" />
+                  <Line fx:id="mg_gym" endX="70.32252502441406" endY="-25.882715225219727" layoutX="223.0" layoutY="273.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="43.666656494140625" startY="-13.333328247070312" />
+                  <Line fx:id="mg_bus" endX="186.0" endY="-29.333328247070312" layoutX="267.0" layoutY="305.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="38.333343505859375" startY="-29.333328247070312" />
+                  <Line fx:id="w_10" endX="147.0" endY="23.755573272705078" layoutX="324.0" layoutY="159.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="75.8000259399414" startY="23.48965072631836" />
+                  <Line fx:id="admin_10" endX="175.0" endY="2.0" layoutX="327.0" layoutY="165.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="175.0" startY="-11.0" />
+                  <Line fx:id="aud2_admin" endX="64.46665954589844" endY="12.0" layoutX="430.0" layoutY="105.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="28.893953323364258" startY="-12.68508243560791" />
+                  <Line fx:id="mg_tsc" endX="68.33282470703125" endY="69.63086700439453" layoutX="203.0" layoutY="309.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="53.0" />
+                  <Line fx:id="tsc_g1" endX="44.13340377807617" endY="91.5333480834961" layoutX="217.0" layoutY="355.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="55.11998748779297" startY="70.18074035644531" />
+                  <Line fx:id="tsc_agri" endX="39.333343505859375" endY="86.0" layoutX="253.0" layoutY="305.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="65.0" startY="61.0" />
+                  <Line fx:id="aud1_lib" endX="67.13333892822266" endY="86.0" layoutX="456.0" layoutY="311.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="51.66668701171875" startY="62.0" />
+                  <Line fx:id="agri_aud1" endX="138.0" endY="-19.0" layoutX="323.0" layoutY="375.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="54.0" startY="-19.0" />
+                  <Line fx:id="mg_agri" endX="31.333343505859375" endY="46.0" layoutX="245.0" layoutY="242.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="70.25019073486328" startY="96.3717269897461" />
+                  <Line fx:id="aud2_w" endX="-10.802188873291016" endY="-30.74053955078125" layoutX="394.0" layoutY="190.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="25.285436630249023" startY="-81.8132095336914" />
+                  <Line fx:id="bus_10" endX="178.7904815673828" endY="4.308052062988281" layoutX="324.0" layoutY="246.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" startX="178.67616271972656" startY="-37.6888427734375" />
+                  <Label layoutX="141.0" layoutY="78.0" scaleY="1.5" scaleZ="1.5" text="Second Gate" />
+                  <Label layoutX="324.0" layoutY="40.0" scaleY="1.5" scaleZ="1.5" text="DVM Building" />
+                  <Label layoutX="461.0" layoutY="74.0" scaleY="1.5" scaleZ="1.5" text="Auditorium-2" />
+                  <Label layoutX="527.0" layoutY="122.0" scaleY="1.5" scaleZ="1.5" text="Administrative Building" />
+                  <Label layoutX="527.0" layoutY="175.0" scaleY="1.5" scaleZ="1.5" text="Dr. Kudrat-E-Khuda Building" wrapText="true" />
+                  <Label layoutX="528.0" layoutY="265.0" scaleY="1.5" scaleZ="1.5" text="Bus Stand" wrapText="true" />
+                  <Label layoutX="329.0" layoutY="202.0" scaleY="1.5" scaleZ="1.5" text="Kazi Nazrul Islam Building" wrapText="true" />
+                  <Label layoutX="338.0" layoutY="234.0" scaleY="1.5" scaleZ="1.5" text="Gymnasium" wrapText="true" />
+                  <Label layoutX="155.0" layoutY="267.0" scaleY="1.5" scaleZ="1.5" text="Main Gate" wrapText="true" />
+                  <Label layoutX="159.0" layoutY="458.0" scaleY="1.5" scaleZ="1.5" text="First Gate" wrapText="true" />
+                  <Label layoutX="313.0" layoutY="402.0" scaleY="1.5" scaleZ="1.5" text="TSC" wrapText="true" />
+                  <Label layoutX="330.0" layoutY="318.0" scaleY="1.5" scaleZ="1.5" text="Agriculture Building" wrapText="true" />
+                  <Label layoutX="527.0" layoutY="348.0" scaleY="1.5" scaleZ="1.5" text="Auditorium-1" wrapText="true" />
+                  <Label layoutX="568.0" layoutY="402.0" scaleY="1.5" scaleZ="1.5" text="Central Library" wrapText="true" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
