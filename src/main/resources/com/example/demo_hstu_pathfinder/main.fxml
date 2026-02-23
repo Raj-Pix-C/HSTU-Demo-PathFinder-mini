@@ -11,7 +11,7 @@
             <Button fx:id="goButton" layoutX="150.0" layoutY="495.0" mnemonicParsing="false" onAction="#onGoClicked" prefHeight="26.0" prefWidth="63.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" text="Go" />
             <ChoiceBox id="End" fx:id="end" layoutX="39.0" layoutY="334.0" prefHeight="26.0" prefWidth="285.0" />
             <ChoiceBox id="Start" fx:id="start" layoutX="39.0" layoutY="161.0" prefHeight="26.0" prefWidth="285.0" />
-            <AnchorPane fx:id="mapArea" layoutX="528.0" layoutY="111.0" prefHeight="535.0" prefWidth="720.0" style="-fx-background-color: #FDF6E3; -fx-border-color: #143173;-fx-border-width: 3;     -fx-border-radius: 5;">
+            <AnchorPane fx:id="mapArea" layoutX="498.0" layoutY="93.0" prefHeight="535.0" prefWidth="720.0" style="-fx-background-color: #FDF6E3; -fx-border-color: #143173;-fx-border-width: 3;     -fx-border-radius: 5;">
                <children>
                   <Circle fx:id="SecondGate" fill="DODGERBLUE" layoutX="254.0" layoutY="87.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
                   <Circle fx:id="Wajed" fill="DODGERBLUE" layoutX="367.0" layoutY="181.0" radius="10.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" stroke="BLACK" strokeType="INSIDE" />
@@ -60,11 +60,32 @@
                   <Label layoutX="330.0" layoutY="318.0" scaleY="1.5" scaleZ="1.5" text="Agriculture Building" wrapText="true" />
                   <Label layoutX="527.0" layoutY="348.0" scaleY="1.5" scaleZ="1.5" text="Auditorium-1" wrapText="true" />
                   <Label layoutX="568.0" layoutY="402.0" scaleY="1.5" scaleZ="1.5" text="Central Library" wrapText="true" />
+                  <Label layoutX="227.0" layoutY="170.0" scaleY="1.5" scaleZ="1.5" text="100" />
+                  <Label layoutX="288.0" layoutY="136.0" scaleY="1.5" scaleZ="1.5" text="70" />
+                  <Label layoutX="300.0" layoutY="65.0" scaleY="1.5" scaleZ="1.5" text="50" />
+                  <Label layoutX="389.0" layoutY="65.0" scaleY="1.5" scaleZ="1.5" text="30" />
+                  <Label layoutX="347.0" layoutY="122.0" scaleY="1.5" scaleZ="1.5" text="30" />
+                  <Label layoutX="411.0" layoutY="125.0" scaleY="1.5" scaleZ="1.5" text="45" />
+                  <Label layoutX="460.0" layoutY="106.0" scaleY="1.5" scaleZ="1.5" text="70" />
+                  <Label layoutX="290.0" layoutY="200.0" scaleY="1.5" scaleZ="1.5" text="70" />
+                  <Label layoutX="427.0" layoutY="162.0" scaleY="1.5" scaleZ="1.5" text="35" />
+                  <Label layoutX="474.0" layoutY="150.0" scaleY="1.5" scaleZ="1.5" text="15" />
+                  <Label layoutX="274.0" layoutY="255.0" scaleY="1.5" scaleZ="1.5" text="10" />
+                  <Label layoutX="375.0" layoutY="281.0" scaleY="1.5" scaleZ="1.5" text="100" />
+                  <Label layoutX="506.0" layoutY="221.0" scaleY="1.5" scaleZ="1.5" text="60" />
+                  <Label layoutX="305.0" layoutY="303.0" scaleY="1.5" scaleZ="1.5" text="50" />
+                  <Label layoutX="244.0" layoutY="343.0" scaleY="1.5" scaleZ="1.5" text="65" />
+                  <Label layoutX="404.0" layoutY="362.0" scaleY="1.5" scaleZ="1.5" text="30" />
+                  <Label layoutX="291.0" layoutY="357.0" scaleY="1.5" scaleZ="1.5" text="20" />
+                  <Label layoutX="496.0" layoutY="383.0" scaleY="1.5" scaleZ="1.5" text="15" />
+                  <Label layoutX="247.0" layoutY="423.0" scaleY="1.5" scaleZ="1.5" text="30" />
                </children>
             </AnchorPane>
             <Label fx:id="startLabel" layoutX="165.0" layoutY="111.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" text="Start" />
             <Label fx:id="endLabel" layoutX="165.0" layoutY="291.0" scaleX="1.5" scaleY="1.5" scaleZ="1.5" text="End" />
-            <Separator fx:id="separator" layoutX="433.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="3.0" scaleX="1.5" scaleZ="1.5" />
+            <Separator fx:id="separator" layoutX="438.0" orientation="VERTICAL" prefHeight="632.0" prefWidth="3.0" scaleX="1.5" scaleZ="1.5" />
+            <Label fx:id="label1" layoutX="50.0" layoutY="669.0" prefHeight="18.0" prefWidth="1181.0" scaleY="1.5" scaleZ="1.5" />
+            <Label fx:id="dist" layoutX="50.0" layoutY="633.0" prefHeight="18.0" prefWidth="388.0" scaleY="1.5" scaleZ="1.5" />
          </children>
       </AnchorPane>
    </children>

@@ -15,6 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
@@ -29,6 +30,7 @@ public class Controller implements Initializable {
     public AnchorPane mapArea;
     public AnchorPane actualBackground;
     public Separator separator;
+    public Label dist;
 
 
     // creating instance
@@ -148,7 +150,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        // choicebox sectoin // begin //
+        // choicebox section // begin //
 
         // 'start' choicebox items initialize and capture section // begin //
         start.setItems(items);
@@ -304,16 +306,22 @@ public class Controller implements Initializable {
 
     // method to find path(which is precalculated) between selected items from star and end choiceboxes
     @FXML
-    public void onGoClicked() {
+    public void onGoClicked(ActionEvent ae) throws IOException {
+        StringBuilder sb = new StringBuilder();
+
         // testing code
 
         System.out.println("Clicked on " + selectedStart + " to " + selectedEnd + "\ndistance: " + pathfinder.getDistance(selectedStart, selectedEnd));
         System.out.print("path picked: ");
         LinkedList<Integer> path = (LinkedList<Integer>) pathfinder.pathConstruct(selectedStart, selectedEnd);
         for(int i = 0; i < path.size(); i++) {
-            System.out.print(items.get(path.get(i)));
+            sb.append(items.get(path.get(i)));
+            System.out.print(sb);
 
             if(i < path.size() - 1) {
+                sb.append(" --( ");
+                sb.append(pathfinder.shortestPath[path.get(i)][path.get(i+1)]);
+                sb.append(" )--> ");
                 System.out.print(" --> ");
             }
         }
@@ -344,6 +352,15 @@ public class Controller implements Initializable {
             }
         }
 
+
+        // path print on screen code
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append("Shortest Distance: ");
+        sb2.append(pathfinder.getDistance(selectedStart, selectedEnd));
+        sb2.append(" meters");
+
+        label1.setText(sb.toString());
+        dist.setText(sb2.toString());
 
     }
 
